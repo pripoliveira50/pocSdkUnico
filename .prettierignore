@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+android/
+ios/
+build/
+dist/
+coverage/
+
+# Metro
+.metro/
+
+# Generated files
+*.bundle.js
+*.bundle.map
+
+# Package managers
+package-lock.json
+yarn.lock
+.pnp.cjs
+.pnp.loader.mjs
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db

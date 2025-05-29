@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+android/
+ios/
+build/
+dist/
+coverage/
+
+# Metro
+.metro/
+
+# Config files
+metro.config.js
+babel.config.js
+jest.config.js
+*.config.js
+
+# Generated files
+*.bundle.js
+*.bundle.map
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,71 @@
+apply plugin: "com.android.application"
+apply plugin: "org.jetbrains.kotlin.android"
+apply plugin: "com.facebook.react"
+
+apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"
+
+
+react {
+    autolinkLibrariesWithApp()
+}
+
+def enableProguardInReleaseBuilds = false
+def jscFlavor = 'io.github.react-native-community:jsc-android:2026004.+'
+
+android {
+    ndkVersion rootProject.ext.ndkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+    compileSdk rootProject.ext.compileSdkVersion
+
+    namespace "com.pocsdkunico"
+
+    defaultConfig {
+        applicationId "com.pocsdkunico"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        // ✅ Necessário para o react-native-config funcionar
+        resValue "string", "build_config_package", "com.pocsdkunico"
+          // ✅ Use os nomes corretos das variáveis
+        buildConfigField "String", "UNICO_BUNDLE_ID", "\"${project.env.get("UNICO_BUNDLE_ID") ?: ""}\""
+        buildConfigField "String", "UNICO_HOST_KEY", "\"${project.env.get("UNICO_HOST_KEY") ?: ""}\""
+        buildConfigField "String", "UNICO_ENVIRONMENT", "\"${project.env.get("UNICO_ENVIRONMENT") ?: "UAT"}\""
+
+    }
+
+    signingConfigs {
+        debug {
+            storeFile file('debug.keystore')
+            storePassword 'android'
+            keyAlias 'androiddebugkey'
+            keyPassword 'android'
+        }
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.debug
+        }
+        release {
+            signingConfig signingConfigs.debug
+            minifyEnabled enableProguardInReleaseBuilds
+            proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+        }
+    }
+}
+
+dependencies {
+    implementation "io.unico:capture:5.33.0"
+    implementation("com.facebook.react:react-android")
+    implementation project(':react-native-config')
+    implementation project(':react-native-permissions') 
+
+    if (hermesEnabled.toBoolean()) {
+        implementation("com.facebook.react:hermes-android")
+    } else {
+        implementation jscFlavor
+    }
+}
+

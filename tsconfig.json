@@ -1,0 +1,25 @@
+{
+  "extends": "@react-native/typescript-config/tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@domain/*": ["src/domain/*"],
+      "@data/*": ["src/data/*"],
+      "@presentation/*": ["src/presentation/*"],
+      "@infrastructure/*": ["src/infrastructure/*"],
+
+      "@data/repositories/*": ["src/data/repositories/*"],
+
+      "@shared/*": ["src/shared/*"],
+
+      "@/*": ["src/*"]
+    }
+  },
+  "include": ["src/**/*", "*.ts", "*.tsx"],
+  "exclude": [
+    "node_modules",
+    "babel.config.js",
+    "metro.config.js",
+    "jest.config.js"
+  ]
+}

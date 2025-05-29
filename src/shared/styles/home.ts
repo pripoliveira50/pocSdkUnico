@@ -1,0 +1,247 @@
+import { StyleSheet } from 'react-native';
+
+export const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#f5f5f5',
+  },
+  scrollContent: {
+    flexGrow: 1,
+    padding: 20,
+  },
+  title: {
+    fontSize: 28,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    color: '#333',
+    marginBottom: 5,
+  },
+  subtitle: {
+    fontSize: 16,
+    textAlign: 'center',
+    color: '#666',
+    marginBottom: 30,
+  },
+  captureSection: {
+    backgroundColor: '#e8f5e8',
+    padding: 15,
+    borderRadius: 10,
+    marginBottom: 20,
+  },
+  testSection: {
+    backgroundColor: '#f0f4ff',
+    padding: 15,
+    borderRadius: 10,
+    marginBottom: 20,
+  },
+  guidedFlowSection: {
+    backgroundColor: '#f3e5f5',
+    padding: 15,
+    borderRadius: 10,
+    marginBottom: 20,
+    alignItems: 'center',
+  },
+  guidedDescription: {
+    fontSize: 14,
+    color: '#7b1fa2',
+    textAlign: 'center',
+    marginBottom: 15,
+    lineHeight: 20,
+  },
+  guidedFlowActive: {
+    backgroundColor: '#e8eaf6',
+    padding: 15,
+    borderRadius: 10,
+    marginBottom: 20,
+  },
+  guidedHeader: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: 15,
+  },
+  guidedTitle: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#5e35b1',
+  },
+  cancelButton: {
+    backgroundColor: '#ffcdd2',
+    paddingHorizontal: 10,
+    paddingVertical: 5,
+    borderRadius: 5,
+  },
+  cancelButtonText: {
+    fontSize: 12,
+    color: '#d32f2f',
+  },
+  progressContainer: {
+    marginBottom: 20,
+  },
+  progressText: {
+    fontSize: 14,
+    color: '#5e35b1',
+    textAlign: 'center',
+    marginBottom: 8,
+  },
+  progressBar: {
+    height: 8,
+    backgroundColor: '#c5cae9',
+    borderRadius: 4,
+    overflow: 'hidden',
+  },
+  progressFill: {
+    height: '100%',
+    backgroundColor: '#5e35b1',
+    borderRadius: 4,
+  },
+  currentStepContainer: {
+    backgroundColor: '#fff',
+    padding: 20,
+    borderRadius: 10,
+    alignItems: 'center',
+    marginBottom: 15,
+  },
+  stepIcon: {
+    fontSize: 40,
+    marginBottom: 10,
+  },
+  stepTitle: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: '#333',
+    marginBottom: 8,
+  },
+  stepDescription: {
+    fontSize: 14,
+    color: '#666',
+    textAlign: 'center',
+    marginBottom: 15,
+    lineHeight: 20,
+  },
+  stepCompleted: {
+    alignItems: 'center',
+  },
+  stepCompletedText: {
+    fontSize: 16,
+    color: '#4caf50',
+    fontWeight: '600',
+  },
+  guidedSubmitSection: {
+    backgroundColor: '#e8f5e8',
+    padding: 15,
+    borderRadius: 10,
+    marginBottom: 20,
+    alignItems: 'center',
+  },
+  guidedSubmitTitle: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: '#2e7d32',
+    marginBottom: 15,
+    textAlign: 'center',
+  },
+  sectionTitle: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#333',
+    marginBottom: 15,
+    textAlign: 'center',
+  },
+  buttonRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    gap: 10,
+    marginBottom: 10,
+  },
+  collectionSection: {
+    backgroundColor: '#fff',
+    padding: 15,
+    borderRadius: 10,
+    marginBottom: 20,
+  },
+  itemCard: {
+    backgroundColor: '#f8f9fa',
+    padding: 12,
+    borderRadius: 8,
+    marginBottom: 10,
+  },
+  itemHeader: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: 5,
+  },
+  itemTitle: {
+    fontSize: 16,
+    fontWeight: '600',
+    color: '#333',
+  },
+  removeButton: {
+    padding: 5,
+  },
+  removeButtonText: {
+    fontSize: 16,
+  },
+  itemInfo: {
+    fontSize: 12,
+    color: '#666',
+    marginBottom: 2,
+  },
+  thumbnail: {
+    width: 80,
+    height: 80,
+    borderRadius: 8,
+    marginTop: 8,
+    alignSelf: 'center',
+  },
+  batchActions: {
+    gap: 15,
+    marginBottom: 20,
+  },
+  loadingContainer: {
+    backgroundColor: '#e3f2fd',
+    padding: 15,
+    borderRadius: 10,
+    alignItems: 'center',
+    marginBottom: 20,
+  },
+  loadingText: {
+    fontSize: 16,
+    color: '#1976d2',
+    fontWeight: '500',
+  },
+  responseContainer: {
+    backgroundColor: '#e8f5e8',
+    padding: 15,
+    borderRadius: 10,
+    marginBottom: 20,
+  },
+  responseTitle: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#2e7d32',
+    marginBottom: 10,
+  },
+  responseText: {
+    fontSize: 14,
+    color: '#388e3c',
+    marginBottom: 5,
+  },
+  statusContainer: {
+    backgroundColor: '#fff3e0',
+    padding: 15,
+    borderRadius: 10,
+  },
+  statusTitle: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#f57c00',
+    marginBottom: 15,
+  },
+  statusText: {
+    fontSize: 14,
+    color: '#ef6c00',
+    marginBottom: 10,
+  },
+});
